@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Lara Lebedinski</title>
+<style>
+  :root{
+    --bg:#faf9f5;
+    --surface:#ffffff;
+    --text:#26292c;
+    --muted:#63696f;
+    --accent:#3a5a78;
+    --border:#e3ded4;
+    --maxw:760px;
+    --maxw-wide:960px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:Georgia,'Times New Roman',serif;
+    line-height:1.6;
+  }
+  header.site-header{
+    border-bottom:1px solid var(--border);
+    background:var(--surface);
+  }
+  .header-inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:28px 24px 20px;
+  }
+  .name{
+    font-size:1.6rem;
+    margin:0 0 2px;
+    letter-spacing:0.01em;
+  }
+  .title{
+    margin:0 0 16px;
+    color:var(--muted);
+    font-size:1rem;
+    font-style:italic;
+  }
+  nav{
+    display:flex;
+    gap:22px;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:0.92rem;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+  }
+  nav a{
+    color:var(--muted);
+    text-decoration:none;
+    padding-bottom:4px;
+    border-bottom:2px solid transparent;
+  }
+  nav a:hover{ color:var(--text); }
+  nav a.active{
+    color:var(--text);
+    border-bottom-color:var(--accent);
+  }
+  main{
+    max-width:var(--maxw-wide);
+    margin:0 auto;
+    padding:28px 24px 64px;
+  }
+  .cv-bar{
+    max-width:var(--maxw);
+    margin:0 auto 16px;
+    padding:0 0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .cv-bar h2{
+    font-size:1.15rem;
+    margin:0;
+    padding:0;
+    border:none;
+  }
+  .cv-bar a.download{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:0.85rem;
+    color:var(--accent);
+    text-decoration:none;
+    border:1px solid var(--border);
+    padding:6px 12px;
+    border-radius:6px;
+    background:var(--surface);
+  }
+  .cv-bar a.download:hover{ border-color:var(--accent); }
+  .pdf-frame-wrap{
+    max-width:var(--maxw-wide);
+    margin:0 auto;
+    border:1px solid var(--border);
+    border-radius:10px;
+    overflow:hidden;
+    background:var(--surface);
+  }
+  .pdf-frame-wrap iframe{
+    display:block;
+    width:100%;
+    height:88vh;
+    min-height:640px;
+    border:0;
+  }
+  .pdf-fallback{
+    max-width:var(--maxw);
+    margin:16px auto 0;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    font-size:0.85rem;
+    color:var(--muted);
+  }
+  a{ color:var(--accent); }
+  a:hover{ color:var(--text); }
+  footer{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:24px 24px 40px;
+    color:var(--muted);
+    font-family:-apple-system,sans-serif;
+    font-size:0.8rem;
+  }
+  @media (max-width:560px){
+    nav{ gap:14px; font-size:0.8rem; flex-wrap:wrap; }
+    .name{ font-size:1.35rem; }
+    .pdf-frame-wrap iframe{ height:75vh; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <p class="name">Lara Lebedinski</p>
+    <p class="title">Senior Research Fellow, Institute of Economic Sciences</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html" class="active">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="cv-bar">
+    <h2>CV</h2>
+    <a class="download" href="cv.pdf" download>Download PDF</a>
+  </div>
+
+  <div class="pdf-frame-wrap">
+    <iframe src="cv.pdf" title="Lara Lebedinski CV"></iframe>
+  </div>
+
+  <p class="pdf-fallback">If the CV doesn't display above, <a href="cv.pdf">open it directly</a>.</p>
+</main>
+
+<footer>&copy; Lara Lebedinski</footer>
+
+</body>
+</html>
